@@ -1,0 +1,190 @@
+/* General styling */
+
+:root {
+	--dark: #21232f;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
+	font-size: 16px;
+	color: var(--dark);
+}
+
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+}
+
+button {
+	cursor: pointer;
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style-position: inside;
+}
+
+/* Header */
+
+header {
+	background: url("../img/bg.jpg") no-repeat center;
+	background-size: cover;
+	min-height: 620px;
+	padding-bottom: 30px;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px 80px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.4rem;
+	background: rgb(0, 0, 0, 0.2);
+}
+.menu a {
+	color: #fff;
+}
+.menu a:not(:first-child) {
+	padding-left: 20px;
+}
+.menu a:not(:last-child) {
+	position: relative;
+	padding-right: 20px;
+	border-right: 1px solid #000;
+}
+
+.face {
+	display: flex;
+	margin-top: 100px;
+	color: #fff;
+	font-size: 1.3rem;
+}
+
+.face .avatars img {
+	max-height: 200px;
+	border-radius: 50%;
+}
+.face .avatars img:first-child {
+	margin-bottom: 20px;
+}
+.info,
+.avatars {
+	width: 50%;
+}
+
+.face .info {
+	padding-left: 50px;
+}
+
+.face .info .title {
+	margin-bottom: 20px;
+}
+
+.face .info p {
+	width: 80%;
+	line-height: 140%;
+}
+
+.face .avatars {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Main Article */
+
+.container {
+	padding: 20px 4vw;
+	line-height: 1.6em;
+	font-size: 1.2rem;
+}
+
+section {
+	padding: 20px 150px 0;
+}
+
+section > * {
+	margin-bottom: 33px;
+}
+
+section > div p {
+	margin-bottom: 5px;
+}
+
+section .title {
+	margin: 18px 0;
+	font-size: 2rem;
+}
+
+.note {
+	background: rgb(255, 255, 205);
+	padding: 15px;
+	border-left: 6px solid rgb(249, 234, 79);
+}
+
+.note p:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.red-highlight {
+	background: rgb(241, 241, 241);
+	color: rgb(197, 86, 127);
+}
+
+footer {
+	background: hsl(160, 70%, 50%);
+	font-size: 2rem;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+/* Examples */
+
+.example-1::first-line {
+	color: #f00;
+	font-variant: small-caps;
+}
+
+.example-2::first-letter {
+	color: #f00;
+	font-size: 30px;
+}
+/* Media queries */
+
+@media (min-width: 501px) and (max-width: 999px) {
+	section {
+		padding: 5vw 7vw 0;
+	}
+	.face .avatars img {
+		max-height: 175px;
+	}
+}
+
+@media (max-width: 500px) {
+	section {
+		padding: 0;
+	}
+
+	.face {
+		flex-wrap: wrap;
+	}
+	.info,
+	.avatars {
+		width: 100%;
+	}
+}

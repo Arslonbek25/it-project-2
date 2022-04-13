@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="libs/default.min.css" />
+		<link rel="stylesheet" href="src/index.css" />
+
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+		<title>Pseudo elements tutorial</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="logo">Pseudo elements</div>
+				<div class="menu">
+					<a href="#">Tutorials</a>
+					<a href="#">Videos</a>
+					<a href="#">Contact</a>
+				</div>
+			</nav>
+			<div class="face">
+				<div class="info">
+					<h2 class="title">BIZ HAQIMIZDA</h2>
+					<p>AL WIUT 2020-2022 Arslonbek Salokhiddinov Sardor Saparbaev Created Date: 13/04/2022</p>
+				</div>
+				<div class="avatars">
+					<img src="img/me.jpg" alt="" />
+					<img src="img/sarik.jpg" alt="" />
+				</div>
+			</div>
+		</header>
+
+		<article class="container">
+			<section>
+				<h2 class="title">Ta'sir etuvchi elementlar(psevdo-elementlar)</h2>
+
+				<p>
+					CSS psevdo-elementli elementning belilangan qismlarini stillash uchun ishlatiladi. 
+                    <p>
+                        Masalan, u quyidagilar uchun ishlatilishi mumkin:
+                    </p>
+                        <ul>
+                            <li>Elementning birinchi harifni yoki satrini stillash</li>
+                            <li>Kontentni element keontentidan oldin yoki keyin kontentni qo'yish</li>
+                        </ul>
+				</p>
+
+				<p>
+					<h2 class="title">Sintaksis:</h2> 
+                    <pre><code class="language-css">selektor::psevdo-element {
+    xossa: qiymat;
+}</code></pre>
+                    <div class="note">
+                        <p>E'tibor bering, ikki nuqtali- 
+                            <span class="red-highlight">::first-line</span>,
+					        <span class="red-highlight">::first-line</span> ni bir shakli.
+                        </p>
+                        <p>CSS3 psevdo-elementlar uchun ikki nuqtali notatsiya, bitta nuqtali
+                            notatsiyani o'rniga ishlatiladi. Bu W3C tomonidan psevdo-elementlarni farqlash uchun qilingan
+                            harakat. </p>
+                        <p>Bitta nuqtali notatsiya CSS2 va CSS1 da ikkala psevdo-element va klass- lar uchun yagona belgilash turi bo'lgan.</p>
+                    </div>
+                    
+                    
+				</p>
+
+				<h2 class="title"><span class="red-highlight">::first-line</span> psevdo elementi</h2>
+                <p><span class="red-highlight">::first-line</span> bu matnning birinchi qatoriga allohida still berish uchun ishlatiladi.</p>
+                <pre><code>&lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+Magni corrupti, totam suscipit exercitationem eligendi modi eius dignissimos 
+facilis neque aspernatur.&lt;/p&gt;</code></pre>
+				<p>
+                    <pre><code>p::fist-line {
+    color: #f00;
+    font-variant: small-caps;
+}</code></pre>
+                <p class="example-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti, totam suscipit exercitationem eligendi modi eius dignissimos facilis neque aspernatur.</p>
+
+                <div>
+                    <p><span class="red-highlight">::first-line</span> psevdo-elementi faqat blok-elementlar uchun ishlatilishi mumkin.</p>
+                    <p>Quyidagi xossalar <span class="red-highlight">::first-line</span> psevdo-elementi uchun qo'llanadi:</p>
+                    <ul>
+                        <li>font xossalari</li>
+                        <li>color xossalari</li>
+                        <li>background</li>
+                        <li>xossalari</li>
+                        <li>word-spacing</li>
+                        <li>letter- spacing</li>
+                        <li>text-decoration</li>
+                        <li>vertical-align</li>
+                        <li>text-transform</li>
+                        <li>text-height</li>
+                        <li>clear</li>
+                    </ul>
+				</p>
+            </div>
+
+            <div>
+
+                <p><span class="red-highlight">::first-letter</span> psevdo-elementi</p>
+                     <p>::first-line bu matnning birinchi harfiga alohida stil berish uchun
+                        ishlatiladi.</p>
+                        <pre><code>p::fist-letter {
+    color: #f00;
+    font-size: 30px;
+}</code></pre>
+            </div>
+            <pre><code>&lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni corrupti, totam suscipit exercitationem eligendi modi eius dignissimos 
+                facilis neque aspernatur.&lt;/p&gt;</code></pre>
+
+                <p class="example-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magni corrupti, totam suscipit exercitationem eligendi modi eius dignissimos 
+                    facilis neque aspernatur.</p>
+
+                <div>
+                    <h2 class="title">Ko'p psevdo-elementlar</h2>
+                    <p>Bir qancha psevdo-elementlar birgalikda ishlatilishi mumkin.</p>
+                </div>
+			</section>
+		</article>
+        <footer>
+            Arslonbek + Sardor &copy;
+        </footer>
+	</body>
+
+	<script src="libs/highlight.min.js"></script>
+	<script>
+		hljs.highlightAll();
+	</script>
+</html>
