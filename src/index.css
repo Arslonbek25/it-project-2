@@ -47,15 +47,16 @@ header {
 
 nav {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 20px 80px;
-	color: #fff;
-	font-weight: bold;
-	font-size: 1.4rem;
+	flex-wrap: wrap;
 	background: rgb(0, 0, 0, 0.2);
+	padding: 20px 80px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #fff;
+	user-select: none;
 }
-.menu a {
+nav a {
 	color: #fff;
 }
 .menu a:not(:first-child) {
@@ -63,20 +64,20 @@ nav {
 }
 .menu a:not(:last-child) {
 	position: relative;
-	padding-right: 20px;
 	border-right: 1px solid #000;
+	padding-right: 20px;
 }
 
 .face {
 	display: flex;
 	margin-top: 100px;
-	color: #fff;
 	font-size: 1.3rem;
+	color: #fff;
 }
 
 .face .avatars img {
-	max-height: 200px;
 	border-radius: 50%;
+	max-height: 200px;
 }
 .face .avatars img:first-child {
 	margin-bottom: 20px;
@@ -109,8 +110,8 @@ nav {
 
 .container {
 	padding: 20px 4vw;
-	line-height: 1.6em;
 	font-size: 1.2rem;
+	line-height: 1.6em;
 }
 
 section {
@@ -131,9 +132,9 @@ section .title {
 }
 
 .note {
+	border-left: 6px solid rgb(249, 234, 79);
 	background: rgb(255, 255, 205);
 	padding: 15px;
-	border-left: 6px solid rgb(249, 234, 79);
 }
 
 .note p:not(:last-child) {
@@ -147,8 +148,8 @@ section .title {
 
 footer {
 	background: hsl(160, 70%, 50%);
-	font-size: 2rem;
 	height: 100px;
+	font-size: 2rem;
 	line-height: 100px;
 	text-align: center;
 }
@@ -156,13 +157,13 @@ footer {
 /* Examples */
 
 .example-1::first-line {
-	color: #f00;
 	font-variant: small-caps;
+	color: #f00;
 }
 
 .example-2::first-letter {
-	color: #f00;
 	font-size: 30px;
+	color: #f00;
 }
 /* Media queries */
 
